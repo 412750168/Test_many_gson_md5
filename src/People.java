@@ -6,6 +6,7 @@ public class People {
 	private String name;
 	private String add[];
 	private int age;
+	private Person person;
 	
 	
 	public People() {
@@ -14,11 +15,12 @@ public class People {
 	}
 
 
-	public People(String name, String[] add, int age) {
+	public People(String name, String[] add, int age,Person person) {
 		super();
 		this.name = name;
 		this.add = add;
 		this.age = age;
+		this.person = person;
 	}
 
 
@@ -51,10 +53,17 @@ public class People {
 		this.age = age;
 	}
 
+	public Person getPerson(){
+		return person;
+	}
+	
+	public void setPerson(Person person){
+		this.person = person;
+	}
 
 	@Override
 	public String toString() {
-		return "People [name=" + name + ", add=" + Arrays.toString(add) + ", age=" + age + "]";
+		return "People [name=" + name + ", add=" + Arrays.toString(add) + ", age=" + age + person.toString() +"]";
 	}
 
 

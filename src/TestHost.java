@@ -67,9 +67,10 @@ public class TestHost {
 		  people.setAge(18);
 		  people.setName("zzl");
 		  String[] list = {"东莞","广州"};
-		  
+		  Person person = new Person("ying",34);
 		  
 		  people.setAdd(list);
+		  people.setPerson(person);
 		  
 		  Gson gson = new Gson();
 		  List<People> persons = new ArrayList<People>();
